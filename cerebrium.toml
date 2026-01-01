@@ -1,0 +1,22 @@
+[cerebrium.deployment]
+name = "4643"
+python_version = "3.11"
+
+[cerebrium.hardware]
+cpu = 2
+memory = 32.0
+compute = "ADA_L40"
+gpu_count = 1
+region = "us-east-1"
+
+[cerebrium.scaling]
+min_replicas = 0
+max_replicas = 5
+replica_concurrency = 10
+response_grace_period = 900
+
+[cerebrium.dependencies.pip]
+cerebrium                  # <-- ضروری برای import cerebrium
+"diffusers[torch] @ git+https://github.com/huggingface/diffusers.git"
+torch = ">=2.3.0"
+pillow
