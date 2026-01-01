@@ -1,0 +1,11 @@
+[cerebrium.deployment]
+python_version = "3.11"
+
+[cerebrium.dependencies.pip]
+cerebrium
+"diffusers[torch] @ git+https://github.com/huggingface/diffusers.git"
+torch = ">=2.3.0"
+pillow
+
+[cerebrium.dependencies.apt]
+git
